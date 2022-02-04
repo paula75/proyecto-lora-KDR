@@ -425,7 +425,8 @@ int main( void )
   /* Configure the Lora Stack*/
   LORA_Init( &LoRaMainCallbacks, &LoRaParamInit);
 	
-	gps_Identify();	
+	// Paula: Comentado
+	//gps_Identify();	
   
   while( 1 )
   {

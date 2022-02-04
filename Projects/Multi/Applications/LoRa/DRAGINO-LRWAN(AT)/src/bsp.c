@@ -78,14 +78,14 @@ void BSP_sensor_Read( sensor_t *sensor_data)
 	HW_GetBatteryLevel( );
 //	sensor_data->oil=AD_code1*batteryLevel_mV/4095;
   AD_code2 = AD_code1*batteryLevel_mV/4095;
-	AD_code3 = (AD_code2*57/47);
-//	PRINTF("\n\rAD_code3=%d  \n\r", AD_code3);
+	AD_code3 = (AD_code2*20/10);
+	PRINTF("\n\rAD_code3=%d  \n\r", AD_code3);
 //	if(AD_code2 <= 3050)
 //	{
 //		gps_state_no();
 //		lora_state_Led();
 //	}
-  sensor_data->bat_mv = AD_code2*(47 + 10)/47;
+  sensor_data->bat_mv = AD_code2*(10 + 10)/10;
 }
 
 void  BSP_sensor_Init( void  )

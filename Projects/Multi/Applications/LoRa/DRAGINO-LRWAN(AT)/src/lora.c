@@ -118,7 +118,8 @@ static uint32_t s_key[32];    //store key
 static uint32_t s_hard[1]; //store hardware version
 
 uint8_t mpuint_flags=0;
-uint8_t ic_version=2;
+// Cambio de version 2 a 3. Fecha : 6/01
+uint8_t ic_version=3;
 uint16_t hardware_version=167;
 uint8_t joinrx2_dr;
 float pdop_value;
@@ -164,7 +165,6 @@ uint16_t dr_power =0;
 
 #define HEX16(X)  X[0],X[1], X[2],X[3], X[4],X[5], X[6],X[7],X[8],X[9], X[10],X[11], X[12],X[13], X[14],X[15]
 #define HEX8(X)   X[0],X[1], X[2],X[3], X[4],X[5], X[6],X[7]
-
 static State_t State = STATE_LED ;
 
 static GPSState_t GPSState = STATE_GPS_NO;
